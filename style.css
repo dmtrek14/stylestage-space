@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Yaldevi:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&family=Yaldevi:wght@400;600&display=swap');
 
 :root {
   --color-primary: #3a00ff;
@@ -14,7 +14,6 @@
   --color-anchor: #88bbff;
 
   --font-family: "Source Sans Pro", sans-serif;
-  --font-weight-strong: 500;
   --font-size-h1: 6rem;
   --font-size-h2: 3rem;
   --font-size-h3: 2rem;
@@ -85,13 +84,10 @@ select {
     scroll-behavior: auto !important;
   }
 
-  header a.link-github:hover {
+  header a.link-github:hover, header a.link-github:focus, a.link-allstyles:hover, a.link-allstyles:focus {
     background-color: var(--color-primary-dark);
   }
 
-  header a.link-github:focus {
-    background-color: var(--color-primary-dark);
-  }
 }
 
 
@@ -161,7 +157,7 @@ header h2 {
   border-top: 2px solid var(--color-secondary);
 }
 
-header .link-github {
+header .link-github, .link-allstyles {
   background: linear-gradient(to right, var(--color-primary-dark) 50%, var(--color-primary-alt) 50%);
   background-size: 200% 100%;
   background-position: bottom right;
@@ -171,17 +167,15 @@ header .link-github {
   padding: 0.6rem;
 }
 
-header a.link-github  {
+header a.link-github, a.link-allstyles  {
   text-decoration: none;
 }
 
-header a.link-github:hover {
+header a.link-github:hover, header a.link-github:focus, a.link-allstyles:hover, a.link-allstyles:focus {
   background-position: bottom left;
 }
 
-header a.link-github:focus {
-  background-position: bottom left;
-}
+
 
 /* nav {
   position: sticky;
@@ -203,13 +197,60 @@ nav ul a {
   padding: 0.6rem;
   color: var(--color-background);
   font-size: 1.25rem;
-  font-weight: bold;;
+  font-weight: bold;
   text-decoration: none;
 }
 
 nav ul li {
   margin: 0.3rem;
 } 
+
+
+article .container, .page-footer .container, #styles .container {
+  width: 100%;
+  max-width: 80ch;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#about {
+  margin-top: 1rem;
+}
+
+
+main h2, aside h2 {
+  border-left: 3px solid var(--color-secondary);
+  padding-left: 1rem;
+}
+
+#styles > .container {
+  margin-bottom: 1rem;
+}
+
+
+
+
+section.container, aside > .container {
+  margin-top: 1rem;
+}
+
+footer.page-footer {
+  padding: 3vh 1rem;
+  place-items: center;
+  background-color: var(--color-dark);
+  text-align: center;
+}
+
+footer.page-footer ul {
+  display: grid;
+  list-style: none;
+  grid-template-columns: repeat(auto-fit, minmax(12ch, auto));
+}
+
+
+.page-footer .container > :last-child {
+  margin-bottom: 0;
+}
 
 /* 
 p,
